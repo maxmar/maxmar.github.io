@@ -2,8 +2,8 @@
   "name": "HA Push Demo",  
   "short_name": "HA Push Demo",  
   "icons": [{  
-    "src": "http://hostadvice.com/wp-content/uploads/2013/06/icon-large-features.png",  
-    "sizes": "95x88",
+    "src": "http://www.jsclasses.org/browse/view/image/file/3900/name/android-icon-192x192.png",  
+    "sizes": "192x192",
     "type": "image/png" 
     }],  
     "start_url": "/index.html",  

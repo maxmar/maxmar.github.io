@@ -2,7 +2,7 @@ var _apiURL = 'https://maxmar.github.io/sdfsdfsdfsdfsdf',
 	_errorIconUrl = 'http://hostadvice.com/wp-content/uploads/2013/06/icon-large-features.png';
 
 self.addEventListener('push', function(event) {
-  console.log('Received a push message', event);
+  console.log('Received a push message', event.data.json());
 
   var title = 'Yay a message.';
   var body = 'We have received a push message.';
