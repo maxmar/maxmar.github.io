@@ -28,6 +28,8 @@ function initialiseState() {
     return;
   }
 
+  Notification.requestPermission();
+
   if (Notification.permission === 'denied') {
     console.warn('The user has blocked notifications.');
     return;
