@@ -73,7 +73,7 @@ function initialiseState() {
         }
 
         // sendSubscriptionToServer(subscription);
-        console.log(subscription);
+        console.log('Subscription: ', subscription);
 
         //////////////////////////
         pushButton.textContent = 'Disable Push Messages';
