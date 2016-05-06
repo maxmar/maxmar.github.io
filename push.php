@@ -1,6 +1,6 @@
 <?php
 $authKey = 'AIzaSyAW3ew5SBdyffNzXDO-cAyKH0vrf52h1o0';
-$endpoints[] = 'e9xHSYNunDo:APA91bEfS3Cli5-6g46EtFUYFYLe-_vAkGqc6woYvzQ0zmG_30o_gOIzC5b_vPzw2o4OGOXWD6smBOrCc59ldWGeQ3jbv7NVla50RHYVqfwPyvpdYq-UblX9aXiWdlDyMt-7kcmj1MvV';
+$endpoints[] = 'eiAu_XP4dEI:APA91bH17sN89aCe8KURNT1FyYk76zrg9M7lsqtoKiSpFbVh2iLAix5Q2uLAqCImQ9CAsX__Ih4x7_XmTkvJsFZ0o0XqHl9G87lHiWUCur9jlb_Y0U1YBcZxFxfV7wsNG8OVg3lmwXi8';
 $gcmUrl = 'https://android.googleapis.com/gcm/send';
 
 $data = [
