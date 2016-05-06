@@ -22,12 +22,8 @@ window.addEventListener('load', function() {
 
 
 function initialiseState(reg) {
-  if ( ! (reg.showNotification)) {
+  if (!(reg.showNotification)) {
     // console.log('Notifications aren\'t supported on service workers.');
-    useNotifications = false;
-
-  } else {
-    useNotifications = true;
   }
 
   if (Notification.permission === 'denied') {
@@ -44,14 +40,18 @@ function initialiseState(reg) {
     reg.pushManager.subscribe({ userVisibleOnly: true })
       .then(function(subscription) {
 
-        if ( ! subscription) {
+        if (!subscription) {
           // console.log('Not yet subscribed to Push')
           return;
         }
 
         var endpoint = subscription.endpoint;
-        console.log(endpoint);
 
+        // if endpoint.startswith('https://android.googleapis.com/gcm/send'):
+        //   endpointParts = endpoint.split('/')
+        //   registrationId = endpointParts[len(endpointParts) - 1]
+
+        console.log(endpoint);
         // updateStatus(endpoint,key,'init');
       })  
       .catch(function(err) {
