@@ -46,7 +46,7 @@ self.addEventListener('push', function(event) {
         });
       });
     }).catch(function(err) {
-      console.error('Unable to retrieve data', err);
+      // console.error('Unable to retrieve data', err);
 
       var title = 'An error occurred';
       var message = 'We were unable to get the information for this push message';

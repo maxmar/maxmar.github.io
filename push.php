@@ -1,18 +1,10 @@
 <?php
 $authKey = 'AIzaSyAW3ew5SBdyffNzXDO-cAyKH0vrf52h1o0';
-$endpoints[] = 'eiAu_XP4dEI:APA91bH17sN89aCe8KURNT1FyYk76zrg9M7lsqtoKiSpFbVh2iLAix5Q2uLAqCImQ9CAsX__Ih4x7_XmTkvJsFZ0o0XqHl9G87lHiWUCur9jlb_Y0U1YBcZxFxfV7wsNG8OVg3lmwXi8';
+$endpoints[] = 'cTDfCznf8QA:APA91bGsmB6bPl4MQncm0RxYt39SboIiK6k4C_GbZ7ZfO6AJmXq62sfYuTiYdIUZa0RVXFSAsSiLP1eabn-uB2tHmof68Z5_bMd8UExfAgTW8jbBmMUyb7tgOjB7CSX2Wk06kuTw6APz';
 $gcmUrl = 'https://android.googleapis.com/gcm/send';
 
-$data = [
-	"title" => "Hi, %UserName%",
-	"message" => "I\'m an example of push-notification o.o",
-	"icon" => "http://www.jsclasses.org/browse/view/image/file/3900/name/android-icon-192x192.png",
-	"tag" => "example-push-notification",
-];
-
 $fields = [
-	'registration_ids' => $endpoints, 
-	'data' => $data,
+	'registration_ids' => $endpoints,
 ];
 $headers = [
 	"Authorization: key={$authKey}", 
