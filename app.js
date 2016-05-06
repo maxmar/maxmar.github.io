@@ -1,5 +1,3 @@
-Notification.requestPermission();
-
 if ("serviceWorker" in navigator) {
   swPromise = navigator.serviceWorker.register("/sw.js")
 
