@@ -65,6 +65,10 @@ function initialiseState(reg) {
         var key = subscription.getKey('p256dh');
         console.log(key);
 
+
+        console.log(subscription.getKey('p256dh'));
+        console.log(subscription.getKey('auth'));
+
         // updateStatus(endpoint,key,'init');
       })  
       .catch(function(err) {
