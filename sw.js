@@ -1,24 +1,6 @@
 var _apiURL = '/latest.json',
 	_errorIconUrl = 'http://hostadvice.com/wp-content/uploads/2013/06/icon-large-features.png';
 
-// self.addEventListener('push', function(event) {
-//   console.log('Received a push message', event);
-
-//   var title = 'Yay a message.';
-//   var body = 'We have received a push message.';
-//   var icon = _errorIconUrl;
-//   var tag = 'simple-push-demo-notification-tag';
-
-//   event.waitUntil(
-//     self.registration.showNotification(title, {
-//       body: body,
-//       icon: icon,
-//       tag: tag
-//     })
-//   );
-// });
-
-
 self.addEventListener('push', function(event) {
   event.waitUntil(
     fetch(_apiURL).then(function(response) {
