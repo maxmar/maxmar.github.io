@@ -1,23 +1,46 @@
-var isPushEnabled = false;
+Notification.requestPermission();
 
-window.addEventListener('load', function() {
-  var pushButton = document.querySelector('.js-push-button');
+if ("serviceWorker" in navigator) {
+  swPromise = navigator.serviceWorker.register("/sw.js")
 
-  pushButton.addEventListener('click', function() {  
-    if (isPushEnabled) {  
-      unsubscribe();  
-    } else {  
-      subscribe();  
-    }  
+  // swPromise.then(initialiseState);
+
+  swPromise.then(function(registration) {
+    return registration.pushManager.subscribe({ userVisibleOnly: true });
+
+  }).then(function(subscription) {
+    console.log(subscription);
+
+  }).catch(function(err) {
+    console.log("There was a problem with the Service Worker");
+    console.log(err);
   });
+}
 
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-      .then(initialiseState);
-  } else {
-    console.warn('Service workers aren\'t supported in this browser.');
-  }
-});
+
+
+
+
+// var isPushEnabled = false;
+
+// window.addEventListener('load', function() {
+//   var pushButton = document.querySelector('.js-push-button');
+
+//   pushButton.addEventListener('click', function() {  
+//     if (isPushEnabled) {  
+//       unsubscribe();  
+//     } else {  
+//       subscribe();  
+//     }  
+//   });
+
+//   if ('serviceWorker' in navigator) {
+//     navigator.serviceWorker.register('/sw.js')
+//       .then(initialiseState);
+//   } else {
+//     console.warn('Service workers aren\'t supported in this browser.');
+//   }
+// });
 
 
 
@@ -41,7 +64,7 @@ function initialiseState() {
   }
 
   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
-    serviceWorkerRegistration.pushManager.getSubscription()
+    serviceWorkerRegistration.pushManager.subscribe({ userVisibleOnly: true }).getSubscription()
       .then(function(subscription) {
 
         //////////////////////////
