@@ -1,0 +1,16 @@
+{  
+  "name": "HA Push Demo",  
+  "short_name": "HA Push Demo",  
+  "icons": [{  
+    "src": "http://hostadvice.com/wp-content/uploads/2013/06/icon-large-features.png",  
+    "sizes": "95x88",
+    "type": "image/png" 
+    }],  
+    "start_url": "/index.html",  
+    "display": "standalone",  
+    "gcm_sender_id": "924916301509",  
+    "gcm_user_visible_only": true,
+    "permissions": [
+      "gcm"
+    ]  
+}
