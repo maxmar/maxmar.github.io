@@ -49,8 +49,8 @@ function initialiseState(reg) {
           return;
         }
 
-        // console.log(subscription.toJSON());
         var endpoint = subscription.endpoint;
+        console.log(endpoint);
 
         // updateStatus(endpoint,key,'init');
       })  
