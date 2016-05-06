@@ -108,51 +108,51 @@ function initialiseState(reg) {
 
 
 
-function initialiseState() {
+// function initialiseState() {
 
-  if ( ! ('showNotification' in ServiceWorkerRegistration.prototype)) {
-    console.warn('Notifications aren\'t supported.');
-    return;
-  }
+//   if ( ! ('showNotification' in ServiceWorkerRegistration.prototype)) {
+//     console.warn('Notifications aren\'t supported.');
+//     return;
+//   }
 
-  Notification.requestPermission();
+//   Notification.requestPermission();
 
-  if (Notification.permission === 'denied') {
-    console.warn('The user has blocked notifications.');
-    return;
-  }
+//   if (Notification.permission === 'denied') {
+//     console.warn('The user has blocked notifications.');
+//     return;
+//   }
 
-  if ( ! ('PushManager' in window)) {
-    console.warn('Push messaging isn\'t supported.');
-    return;
-  }
+//   if ( ! ('PushManager' in window)) {
+//     console.warn('Push messaging isn\'t supported.');
+//     return;
+//   }
 
-  navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
-    serviceWorkerRegistration.pushManager.subscribe({ userVisibleOnly: true }).getSubscription()
-      .then(function(subscription) {
+//   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
+//     serviceWorkerRegistration.pushManager.subscribe({ userVisibleOnly: true }).getSubscription()
+//       .then(function(subscription) {
 
-        //////////////////////////
-        var pushButton = document.querySelector('.js-push-button');
-        pushButton.disabled = false;
-        //////////////////////////
+//         //////////////////////////
+//         var pushButton = document.querySelector('.js-push-button');
+//         pushButton.disabled = false;
+//         //////////////////////////
 
-        if ( ! subscription) {
-          return;
-        }
+//         if ( ! subscription) {
+//           return;
+//         }
 
-        // sendSubscriptionToServer(subscription);
-        console.log('Subscription: ', subscription);
+//         // sendSubscriptionToServer(subscription);
+//         console.log('Subscription: ', subscription);
 
-        //////////////////////////
-        pushButton.textContent = 'Disable Push Messages';
-        isPushEnabled = true;
-        //////////////////////////
-      })
-      .catch(function(err) {
-        console.warn('Error during getSubscription()', err);
-      });
-  });
-}
+//         //////////////////////////
+//         pushButton.textContent = 'Disable Push Messages';
+//         isPushEnabled = true;
+//         //////////////////////////
+//       })
+//       .catch(function(err) {
+//         console.warn('Error during getSubscription()', err);
+//       });
+//   });
+// }
 
 
 function subscribe() {  
