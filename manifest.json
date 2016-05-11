@@ -1,6 +1,6 @@
 {
-  "name": "HA Push Demo",
-  "short_name": "HA Push Demo",
+  "name": "Push Demo",
+  "short_name": "Push Demo",
   "icons": [{
     "src": "http://www.jsclasses.org/browse/view/image/file/3900/name/android-icon-192x192.png",
     "sizes": "192x192",
@@ -8,7 +8,7 @@
     }],
     "start_url": "/index.html",
     "display": "standalone",
-    "gcm_sender_id": "924916301509",
+    "gcm_sender_id": "<YOUR_PROJECT_ID>",
     "gcm_user_visible_only": true,
     "permissions": [
       "gcm"
