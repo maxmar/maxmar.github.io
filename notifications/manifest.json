@@ -1,0 +1,23 @@
+{
+  "name": "HA Push Demo",
+  "short_name": "HA Push Demo",
+  "icons": [
+    {
+      "src": "/notifications/success.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "/notifications/error.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/push.html",
+  "display": "standalone",
+  "gcm_sender_id": "924916301509",
+  "gcm_user_visible_only": true,
+  "permissions": [
+    "gcm"
+  ]
+}
