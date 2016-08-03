@@ -1,8 +1,0 @@
-{
-	"notification" : {
-		"title": "Hi, %UserName%",
-		"message": "I'm an example of push-notification o.o",
-		"icon": "/notifications/success.png",
-		"tag": "example-push-notification"
-	}
-}
