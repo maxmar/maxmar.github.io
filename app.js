@@ -86,7 +86,7 @@ window.addEventListener('load', function() {
     if ('serviceWorker' in navigator) {
         console.log('Service worker registration.');
 
-        navigator.serviceWorker.register('/notifications/sw.js').then(function(reg) {
+        navigator.serviceWorker.register('/sw.js').then(function(reg) {
             console.log(reg);
             initialiseState(reg);
         });
