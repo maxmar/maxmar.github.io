@@ -111,7 +111,7 @@ function initialiseState(reg) {
     }
 
     navigator.serviceWorker.ready.then(function(reg) {
-        reg.pushManager.subscribe({ userVisibleOnly: true })
+        reg.pushManager.subscribe() // { userVisibleOnly: true }
             .then(function(subscription) {
 
                 if (!subscription) {
