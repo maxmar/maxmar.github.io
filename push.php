@@ -1,6 +1,6 @@
 <?php
-$authKey = '<YOUR_API_KEY';
-$endpoints[] = '<YOUR_TEST_ENDPOINT';
+$authKey = 'AIzaSyAW3ew5SBdyffNzXDO-cAyKH0vrf52h1o0';
+$endpoints[] = 'e8VnkR3HKiw:APA91bFgYlGAAtvm857yH5wUJC6rHgGU5-ugKr_3hVRuyjZL7ngEOXdZZD7fyIMOftN7yRL8uV0ikfHdyHspMl_w36T-iSO4B48-tdD7dJAwqf97EtyucLXoMi7adt0xbGivTjjakdQO';
 $gcmUrl = 'https://android.googleapis.com/gcm/send';
 
 $fields = [
